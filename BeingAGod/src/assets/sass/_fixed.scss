@@ -1,0 +1,100 @@
+@import "./_rwd.sass";
+
+// fix bootstrap position no setting t,b,l,r
+.t-0 {
+  top: 0 !important;
+}
+
+.b-0 {
+  bottom: 0 !important;
+}
+
+.l-0 {
+  left: 0 !important;
+}
+
+.r-0 {
+  right: 0 !important;
+}
+
+.h-0 {
+  height: 0 !important;
+}
+
+.w-0 {
+  width: 0 !important;
+}
+
+.w-fit {
+  width: fit-content !important;
+}
+
+.w-fill {
+  width: -webkit-fill-available !important;
+}
+
+.z-1000 {
+  z-index: 1000 !important;
+}
+
+// fix semantic ui calendar dark mode
+.ui.dark-calendar.calendar .ui.table {
+  border: none;
+
+  tr {
+    td,
+    th {
+      background-color: #41464c;
+      color: white;
+      font-weight: 700;
+      @include phone-width {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    th {
+      background-color: #555555;
+    }
+
+    &:nth-child(2) th {
+      font-size: 0.8rem;
+      border-top: none;
+      // border-bottom: 1px solid white;
+    }
+
+    td.eat {
+      // background-color: #5ad3d3;
+      color: #89f256;
+    }
+
+    td.active {
+      background-color: #ec3535;
+      color: white;
+    }
+
+    td.eat.active {
+      background-color: #3c8686;
+      color: rgb(44, 58, 40);
+    }
+
+    td.adjacent.disabled {
+      // background-color: #333333;
+      color: #787676;
+    }
+  }
+}
+
+// fix CalendarHeatmap
+.ch-year {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ch-month {
+  margin: 1rem 0.5rem;
+}
+
+.ch-day {
+  border: 1px solid #343a40;
+}
