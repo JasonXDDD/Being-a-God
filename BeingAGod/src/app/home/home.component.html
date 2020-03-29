@@ -1,0 +1,134 @@
+<section class="position-relative" style="background-color: #abc;">
+  <div id="cover" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#cover" data-slide-to="0" class="active"></li>
+      <li data-target="#cover" data-slide-to="1"></li>
+      <li data-target="#cover" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div
+          class="bg"
+          style="height: 600px"
+          [style.backgroundImage]="'url(http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg)'"
+        ></div>
+      </div>
+      <div class="carousel-item">
+        <div
+          class="bg"
+          style="height: 600px"
+          [style.backgroundImage]="'url(http://www.bara-art.com/wp-content/uploads/2017/12/forgoten_apple.jpg)'"
+        ></div>
+      </div>
+      <div class="carousel-item">
+        <div
+          class="bg"
+          style="height: 600px"
+          [style.backgroundImage]="'url(http://www.bara-art.com/wp-content/uploads/2017/02/Brno_streets.jpg)'"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="position-absolute b-0 mt-auto m-3">
+    <h1 class="display-2 font-weight-bold">成神之路</h1>
+  </div>
+</section>
+
+<section class="py-3" style="background-color: #bac;">
+  <div class="d-flex justify-content-center align-items-center">
+    <div
+      class="bg rounded-circle mx-3"
+      style="width: 250px; height: 250px"
+      [style.backgroundImage]="'url(/assets/image/head.jpg)'"
+    ></div>
+
+    <div>
+      <h2 class="display-4 text-white font-weight-bold m-0">做自己的神</h2>
+      <p class="text-white-50">JasonXDDD，罐罐 XD</p>
+
+      <p>
+        致力於前端工程...
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-3" style="background-color: #888;">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col text-center">
+        <div class="ui small statistic">
+          <div class="value">5年4個月</div>
+          <div class="label">前端學習經歷</div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="ui small statistic">
+          <div class="value">20+</div>
+          <div class="label">接手專案</div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="ui small statistic">
+          <div class="value">100w+</div>
+          <div class="label">經手最高價格</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-3" style="background-color: #a98; height: 800px">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col">
+        <div class="m-2 p-2 text-center" style="background-color: #789">
+          <h2 class="font-weight-bold my-2 text-center">技能樹</h2>
+          <app-skill-bubble-chart
+            [data]="skillList"
+          ></app-skill-bubble-chart>
+        </div>
+      </div>
+      <div class="col">
+        <div class="m-2 p-2" style="background-color: #789">
+          <h2 class="font-weight-bold my-2 text-center">時間軸</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-3" style="background-color: #a98; height: 800px">
+  <h2 class="font-weight-bold text-center">作品回顧</h2>
+
+  <div class="d-flex">
+    <app-work-item
+      *ngFor="let item of workList"
+      [title]="item.title"
+      [description]="item.description"
+      [cover]="item.cover"
+      [time]="item.time"
+      [tech]="item.tech"
+      (contentEvent)="setContent($event)"
+    ></app-work-item>
+  </div>
+</section>
+
+<section class="" style="background-color: #a98; height: 800px">
+  <h2 class="font-weight-bold my-2 text-center">社團經歷</h2>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="text-center">
+      <div
+        class="bg rounded-circle mx-3"
+        style="width: 150px; height: 150px"
+        [style.backgroundImage]="'url(/assets/image/head.jpg)'"
+      ></div>
+      <h5 class="m-0 text-white font-weight-bold">EXD FrontEnd</h5>
+    </div>
+  </div>
+</section>
+
+<section class="" style="background-color: #a98; height: 800px">
+  <h2 class="font-weight-bold my-2 text-center">相關連結</h2>
+</section>
