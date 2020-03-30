@@ -1,0 +1,19 @@
+<div class="timeline-small">
+  <div class="timeline-small-body">
+    <ul>
+      <li *ngFor="let event of eventList">
+        <div class="date">{{ event.time }}</div>
+        <div class="bullet" [ngClass]="{
+          'blue': event.type === 'time',
+          'pink': event.type === 'award',
+          'green': event.type === 'work',
+          'orange': event.type === 'group'
+        }"></div>
+        <div class="desc">
+          <h3>{{ event.event }}</h3>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>

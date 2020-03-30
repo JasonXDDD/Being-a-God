@@ -5,10 +5,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { WorkItemComponent } from './work-item/work-item.component';
 import { SkillBubbleChartComponent } from './skill-bubble-chart/skill-bubble-chart.component';
+import { EventTimeLineComponent } from './event-time-line/event-time-line.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, WorkItemComponent, SkillBubbleChartComponent],
+  declarations: [HomeComponent, WorkItemComponent, SkillBubbleChartComponent, EventTimeLineComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
