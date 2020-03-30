@@ -14,6 +14,41 @@ export class HomeComponent implements OnInit {
       cover: 'http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg',
       time: '2020-03',
       tech: ['Angular', 'PWA', 'Firebase'],
+    },
+    {
+      title: '從前從前',
+      description: '故事創作器，參加 APPLE 移動應用創新賽 得獎作品',
+      cover: 'http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg',
+      time: '2020-03',
+      tech: ['RN', 'iOS'],
+    },
+    {
+      title: 'MyProGuide',
+      description: '前公司官網',
+      cover: 'http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg',
+      time: '2020-03',
+      tech: ['Angular', 'PWA'],
+    },
+    {
+      title: 'MyProGuide Tour',
+      description: '前公司旅遊購物平台',
+      cover: 'http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg',
+      time: '2020-03',
+      tech: ['Nuxt', 'PWA'],
+    },
+    {
+      title: 'TaiPower',
+      description: '台電故障線路定位系統',
+      cover: 'http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg',
+      time: '2020-03',
+      tech: ['Angular', 'PWA', 'Firebase', 'Map'],
+    },
+    {
+      title: '自動化工廠',
+      description: '搭配工廠機器回傳數據顯示平台',
+      cover: 'http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg',
+      time: '2020-03',
+      tech: ['React', 'Websocket'],
     }
   ];
 

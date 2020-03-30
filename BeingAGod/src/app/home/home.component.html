@@ -102,24 +102,26 @@
   </div>
 </section>
 
-<section class="py-3" style="background-color: #a98; height: 800px">
+<section class="py-3" style="background-color: #a98;">
   <h2 class="font-weight-bold text-center">作品回顧</h2>
 
-  <div class="d-flex">
-    <app-work-item
-      *ngFor="let item of workList"
-      [title]="item.title"
-      [description]="item.description"
-      [cover]="item.cover"
-      [time]="item.time"
-      [tech]="item.tech"
-      (contentEvent)="setContent($event)"
-    ></app-work-item>
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-center">
+      <app-work-item
+        *ngFor="let item of workList"
+        [title]="item.title"
+        [description]="item.description"
+        [cover]="item.cover"
+        [time]="item.time"
+        [tech]="item.tech"
+        (contentEvent)="setContent($event)"
+      ></app-work-item>
+    </div>
   </div>
 </section>
 
-<section class="" style="background-color: #a98; height: 800px">
-  <h2 class="font-weight-bold my-2 text-center">社團經歷</h2>
+<section class="py-3" style="background-color: #a98; height: 800px">
+  <h2 class="font-weight-bold text-center">社團經歷</h2>
   <div class="d-flex justify-content-center align-items-center">
     <div class="text-center">
       <div
