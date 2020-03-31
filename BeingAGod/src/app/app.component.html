@@ -1,5 +1,5 @@
 
-<app-header></app-header>
+<app-header *ngIf="!isMobile"></app-header>
 
 <div class="bg-dark text-white">
   <router-outlet></router-outlet>

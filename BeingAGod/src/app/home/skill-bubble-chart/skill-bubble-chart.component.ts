@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-skill-bubble-chart',
@@ -9,10 +10,17 @@ export class SkillBubbleChartComponent implements OnInit {
   @Input() data: any[];
   width = 500;
   height = 500;
+  isMobile = false;
 
-  constructor() {}
+  constructor(private deviceService: DeviceDetectorService) {}
 
   ngOnInit(): void {
+    this.isMobile = this.deviceService.isMobile();
+    if (this.isMobile) {
+      this.width = 350;
+      this.height = 500;
+    }
+
     this.genChart();
   }
 

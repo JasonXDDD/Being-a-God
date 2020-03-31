@@ -1,36 +1,37 @@
 <div
-  class="fixed-top d-flex align-items-center justify-content-center w-100 bg-tabbar"
+  class="fixed-top d-flex align-items-center justify-content-between w-100 px-5 bg-tabbar"
   style="box-shadow: 0px -5px 3px #1a191966"
 >
+  <h3 class="font-weight-bold m-0 text-white">成神之路</h3>
 
-  <button
-    class="btn d-flex flex-column justify-content-center p-3 text-white"
-    [routerLink]="['/diet']"
-  >
-    <i
-      class="inverted large users icon"
-      [ngClass]="{'teal': url === '/diet'}"
-    ></i>
-  </button>
+  <div class="d-flex align-items-center justify-content-center">
+    <button
+      class="btn d-flex flex-column justify-content-center p-3 text-white"
+      [routerLink]="['/diet']"
+    >
+      罐罐 XD
+    </button>
 
-  <button
-    class="btn d-flex flex-column justify-content-center p-3 text-white"
-    [routerLink]="['/meal']"
-  >
-    <i
-      class="inverted large utensils icon"
-      [ngClass]="{'teal': url === '/meal'}"
-    ></i>
-  </button>
+    <button
+      class="btn d-flex flex-column justify-content-center p-3 text-white"
+      [routerLink]="['/meal']"
+    >
+      技能樹 & 時間軸
+    </button>
 
-  <button
-    class="btn d-flex flex-column justify-content-center p-3 text-white"
-    [routerLink]="['/user']"
-  >
-    <i
-      class="inverted large user icon"
-      [ngClass]="{'teal': url === '/user'}"
-    ></i>
-  </button>
+    <button
+      class="btn d-flex flex-column justify-content-center p-3 text-white"
+      [routerLink]="['/user']"
+    >
+      作品回顧
+    </button>
+
+    <button
+      class="btn d-flex flex-column justify-content-center p-3 text-white"
+      [routerLink]="['/user']"
+    >
+      社團經歷
+    </button>
+  </div>
 </div>
 <div class="" style="height: 3.5rem;"></div>

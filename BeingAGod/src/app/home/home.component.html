@@ -1,42 +1,32 @@
 <section class="position-relative">
   <div id="cover" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#cover" data-slide-to="0" class="active"></li>
-      <li data-target="#cover" data-slide-to="1"></li>
-      <li data-target="#cover" data-slide-to="2"></li>
+      <li data-target="#cover" *ngFor="let item of bannerList; let id = index; let first = first"
+       [attr.data-slide-to]="id" [ngClass]="{'active': first }"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
+
+      <div class="carousel-item" *ngFor="let item of bannerList; let first = first" [ngClass]="{'active': first }">
         <div
           class="bg"
           style="height: 600px"
-          [style.backgroundImage]="'url(http://www.bara-art.com/wp-content/uploads/2016/09/construction_from_sky.jpg)'"
-        ></div>
+          [style.backgroundImage]="'url(' + item + ')'"
+        >
+        </div>
       </div>
-      <div class="carousel-item">
-        <div
-          class="bg"
-          style="height: 600px"
-          [style.backgroundImage]="'url(http://www.bara-art.com/wp-content/uploads/2017/12/forgoten_apple.jpg)'"
-        ></div>
-      </div>
-      <div class="carousel-item">
-        <div
-          class="bg"
-          style="height: 600px"
-          [style.backgroundImage]="'url(http://www.bara-art.com/wp-content/uploads/2017/02/Brno_streets.jpg)'"
-        ></div>
-      </div>
+
     </div>
   </div>
 
+
   <div class="position-absolute b-0 mt-auto m-3">
-    <h1 class="display-2 font-weight-bold">成神之路</h1>
+    <!-- <h1 class="display-2 font-weight-bold text-white" style="text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);">成神之路</h1> -->
+    <img class="banner-title" src="/assets/image/title.png" alt="">
   </div>
 </section>
 
 <section class="py-5">
-  <div class="d-flex justify-content-center align-items-center">
+  <div class="d-flex flex-sm-row flex-column justify-content-center align-items-center">
     <div
       class="bg rounded-circle mx-3"
       style="width: 15rem; height: 15rem"
@@ -44,8 +34,8 @@
     ></div>
 
     <div>
-      <h2 class=" text-white font-weight-bold">罐罐 XD</h2>
-      <p style="line-height: 2rem">
+      <h2 class="mt-3 mt-sm-0 text-center text-sm-left text-white font-weight-bold">罐罐 XD</h2>
+      <p class="px-3 px-sm-0 text-center text-sm-left" style="line-height: 2rem">
         2015 年大學初期就致力於前端工程，接觸並實作過不同類型的網站。<br />
         我的個性屬於比較有想法的類型，會勇於去嘗試新東西並且堅持完成它。<br />
         接觸過各類大小型案子、並且參與過新創公司開發，對於團隊管理有一定的經驗。<br />
@@ -55,26 +45,26 @@
   </div>
 </section>
 <hr
-  class="my-5"
+  class="my-3 my-sm-5"
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
 <section class="py-5">
-  <div class="container-lg">
+  <div [ngClass]="{'container-lg': !isMobile}">
     <div class="row no-gutters">
-      <div class="col text-center">
+      <div class="col-12 col-sm-4 pb-5 pb-sm-0 text-center">
         <div class="ui statistic inverted">
           <div class="value">5年3個月</div>
           <div class="label">前端學習經歷</div>
         </div>
       </div>
-      <div class="col text-center">
+      <div class="col-12 col-sm-4 pb-5 pb-sm-0 text-center">
         <div class="ui statistic inverted">
           <div class="value">20+</div>
           <div class="label">接手專案</div>
         </div>
       </div>
-      <div class="col text-center">
+      <div class="col-12 col-sm-4 pb-5 pb-sm-0 text-center">
         <div class="ui statistic inverted">
           <div class="value">100w+</div>
           <div class="label">經手最高價格</div>
@@ -84,24 +74,24 @@
   </div>
 </section>
 <hr
-  class="my-5"
+  class="my-3 my-sm-5"
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
 <section class="py-3">
-  <div class="container-lg">
+  <div [ngClass]="{'container-lg': !isMobile}">
     <div class="row no-gutters">
       <div class="col">
         <div
-          class="m-2 p-2 h-100 position-relative"
+          class="m-0 m-sm-2 p-2 h-100 position-relative"
           style="background-color: #333"
         >
           <h2 class="title">技能樹</h2>
 
-          <div class="position-absolute r-0 t-0 m-2 p-2 legend">
-            <div class="mb-2">
+          <div class="position-sm-absolute r-0 t-0 mt-4 m-sm-2 p-2 legend">
+            <div class="text-center mb-2">
               <div
-                class="d-inline-flex align-items-center justify-content-center"
+                class="d-inline-flex align-items-center justify-content-center pr-5 pr-sm-0"
               >
                 <div class="dot pink mr-2"></div>
                 <p class="mr-2" style="font-size: .8rem">前端技能</p>
@@ -113,9 +103,9 @@
                 <p class="mr-2" style="font-size: .8rem">設計技能</p>
               </div>
             </div>
-            <div>
+            <div class="text-center">
               <div
-                class="d-inline-flex align-items-center justify-content-center"
+                class="d-inline-flex align-items-center justify-content-center pr-5 pr-sm-0"
               >
                 <div class="dot red mr-2"></div>
                 <p class="mr-2" style="font-size: .8rem">管理技能</p>
@@ -136,15 +126,15 @@
       </div>
       <div class="col">
         <div
-          class="m-2 p-2 h-100 position-relative"
+          class="m-0 m-sm-2 p-2 h-100 position-relative"
           style="background-color: #333"
         >
           <h2 class="title">時間軸</h2>
 
-          <div class="position-absolute r-0 t-0 m-2 p-2 legend">
-            <div class="mb-2">
+          <div class="position-sm-absolute r-0 t-0 mt-4 m-sm-2 p-2 legend">
+            <div class="text-center mb-2">
               <div
-                class="d-inline-flex align-items-center justify-content-center"
+                class="d-inline-flex align-items-center justify-content-center pr-5 pr-sm-0"
               >
                 <div class="dot dark-blue mr-2"></div>
                 <p class="mr-2" style="font-size: .8rem">學業進程</p>
@@ -156,9 +146,9 @@
                 <p class="mr-2" style="font-size: .8rem">工作經驗</p>
               </div>
             </div>
-            <div>
+            <div class="text-center">
               <div
-                class="d-inline-flex align-items-center justify-content-center"
+                class="d-inline-flex align-items-center justify-content-center pr-5 pr-sm-0"
               >
                 <div class="dot yellow mr-2"></div>
                 <p class="mr-2" style="font-size: .8rem">社團活動</p>
@@ -181,15 +171,15 @@
   </div>
 </section>
 <hr
-  class="my-5"
+  class="my-3 my-sm-5"
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
 <section class="py-3">
   <h2 class="title">作品回顧</h2>
 
-  <div class="px-5">
-    <div class="d-flex flex-wrap">
+  <div class="px-3 px-sm-5">
+    <div class="d-flex flex-wrap flex-sm-row flex-column">
       <app-work-item
         *ngFor="let item of workList"
         [title]="item.title"
@@ -203,36 +193,36 @@
   </div>
 </section>
 <hr
-  class="my-5"
+  class="my-3 my-sm-5"
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
 <section class="py-3">
-  <div class="d-flex justify-content-center align-items-end px-5">
-    <div class="">
+  <div class="d-flex justify-content-center align-items-start align-items-sm-end px-3 px-sm-5">
+    <div class="slogan">
       <h2 class="display-3 font-weight-bold text-right pr-3">
         態度<br />
         決定你的<span>高度</span>
       </h2>
     </div>
-    <div class="">
-      <p style="font-size: 1.2rem;">
+    <div class="mt-3 mt-sm-0">
+      <p class="pb-5 pb-sm-0" style="font-size: 1.2rem;">
         <i class="inverted green grin beam icon"></i> 1.
         很有想法，會主動提出想法與改進
       </p>
-      <p style="font-size: 1.2rem;">
+      <p class="pb-5 pb-sm-0" style="font-size: 1.2rem;">
         <i class="inverted green grin beam icon"></i> 2.
         願意嘗試，如果條件允許，會嘗試新技術或是新事物
       </p>
-      <p style="font-size: 1.2rem;">
+      <p class="pb-5 pb-sm-0" style="font-size: 1.2rem;">
         <i class="inverted green grin beam icon"></i> 3.
         熱切溝通，雖我不善言辭，但我會多與人溝通與表達想法
       </p>
-      <p style="font-size: 1.2rem;">
+      <p class="pb-5 pb-sm-0" style="font-size: 1.2rem;">
         <i class="inverted green grin beam icon"></i> 4.
         堅持負責，不喜歡看見自己的東西爛掉，接下來的案子會盡全力完成
       </p>
-      <p style="font-size: 1.2rem;">
+      <p class="pb-5 pb-sm-0" style="font-size: 1.2rem;">
         <i class="inverted orange grin tongue squint icon"></i>
         缺點是常會一頭做下去碰，卻忘記付出成本太多，但絕對是能動與我滿意的作品
       </p>
@@ -240,20 +230,20 @@
   </div>
 </section>
 <hr
-  class="my-5"
+  class="my-3 my-sm-5"
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
 <section class="py-5">
   <h2 class="title">社團經歷</h2>
-  <div class="py-3 d-flex justify-content-center align-items-center">
+  <div class="py-3 d-flex flex-column flex-sm-row justify-content-center align-items-center">
     <div class="text-center">
       <div
         class="bg rounded-circle mx-4"
         style="width: 150px; height: 150px"
         [style.backgroundImage]="'url(/assets/image/group/EXDFrontEnd.png)'"
       ></div>
-      <h5 class="mt-2 text-white font-weight-bold">EXD 前端聚</h5>
+      <h5 class="mt-2 mb-5 mb-sm-0 text-white font-weight-bold">EXD 前端聚</h5>
     </div>
 
     <div class="text-center">
@@ -262,7 +252,7 @@
         style="width: 150px; height: 150px"
         [style.backgroundImage]="'url(/assets/image/group/TKUCSCC.jpg)'"
       ></div>
-      <h5 class="mt-2 text-white font-weight-bold">淡江資工<br />系計算中心</h5>
+      <h5 class="mt-2 mb-5 mb-sm-0 text-white font-weight-bold">淡江資工<br />系計算中心</h5>
     </div>
 
     <div class="text-center">
@@ -271,7 +261,7 @@
         style="width: 150px; height: 150px"
         [style.backgroundImage]="'url(/assets/image/group/EXDFrontEnd.png)'"
       ></div>
-      <h5 class="mt-2 text-white font-weight-bold">EXD X NTUE<br />前端聚</h5>
+      <h5 class="mt-2 mb-5 mb-sm-0 text-white font-weight-bold">EXD X NTUE<br />前端聚</h5>
     </div>
   </div>
 </section>

@@ -37,6 +37,26 @@
   z-index: 1000 !important;
 }
 
+.text-sm-center {
+  @include pc-width {
+    text-align: center !important;
+  }
+
+  @include pad-width {
+    text-align: center !important;
+  }
+}
+
+.position-sm-absolute {
+  @include pc-width {
+    position: absolute !important;
+  }
+
+  @include pad-width {
+    position: absolute !important;
+  }
+}
+
 // fix semantic ui calendar dark mode
 .ui.dark-calendar.calendar .ui.table {
   border: none;

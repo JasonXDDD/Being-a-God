@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  bannerList = [
+    '/assets/image/banner/banner-1.jpg',
+    '/assets/image/banner/banner-2.jpg',
+    '/assets/image/banner/banner-3.jpg',
+    '/assets/image/banner/banner-4.jpg',
+  ];
   workList = [
     {
       title: 'Diet Calendar',
@@ -72,10 +79,13 @@ export class HomeComponent implements OnInit {
     { type: 'work', time: '2016.04', event: '大二，與朋友組隊接案'},
     { type: 'time', time: '2015.09', event: '大一，進入前端領域與學習'},
   ];
-  constructor() { }
+
+  isMobile = false;
+  constructor(private deviceService: DeviceDetectorService) { }
 
   ngOnInit(): void {
     // this.initGitHubCalendar();
+    this.isMobile = this.deviceService.isMobile();
   }
 
   initGitHubCalendar() {
