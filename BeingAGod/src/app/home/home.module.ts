@@ -12,7 +12,7 @@ import { EventTimeLineComponent } from './event-time-line/event-time-line.compon
   declarations: [HomeComponent, WorkItemComponent, SkillBubbleChartComponent, EventTimeLineComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
   ]
 })
 export class HomeModule { }

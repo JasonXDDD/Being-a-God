@@ -66,7 +66,7 @@ export class SkillBubbleChartComponent implements OnInit {
         .force()
         .nodes(nodes)
         .size([this.width, this.height])
-        .gravity(0.02)
+        .gravity(0.05)
         .charge(0)
         .on('tick', tick)
         .start();
@@ -96,7 +96,7 @@ export class SkillBubbleChartComponent implements OnInit {
         .append('text')
         .attr('dy', '.3em')
         .style('text-anchor', 'middle')
-        .attr('font-size', '10px')
+        .attr('font-size', '12px')
         .attr('fill', 'white')
         .text(d => d.text);
 

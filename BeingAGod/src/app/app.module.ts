@@ -17,6 +17,7 @@ import { PcComponent } from './layout/pc/pc.component';
 import { PhoneComponent } from './layout/phone/phone.component';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HeaderComponent } from './layout/header/header.component';
     PcComponent,
     PhoneComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

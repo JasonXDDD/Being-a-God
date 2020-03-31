@@ -75,6 +75,15 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // this.initGitHubCalendar();
+  }
+
+  initGitHubCalendar() {
+    GitHubCalendar('#github', 'JasonXDDD', {
+      global_stats:  false,
+      summary_text: '.',
+      responsive: true,
+    });
   }
 
   setContent(da) {

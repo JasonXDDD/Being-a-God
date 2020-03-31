@@ -98,3 +98,14 @@
 .ch-day {
   border: 1px solid #343a40;
 }
+
+// fix github calendar
+#github{
+  .graph-before-activity-overview{
+    border: none !important;
+  }
+  .contrib-footer{
+    display: none;
+  }
+}
+
