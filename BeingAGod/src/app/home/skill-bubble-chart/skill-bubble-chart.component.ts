@@ -96,10 +96,9 @@ export class SkillBubbleChartComponent implements OnInit {
         .append('text')
         .attr('dy', '.3em')
         .style('text-anchor', 'middle')
-        .attr('font-size', '14px')
-        .text(function(d) {
-          return d.text.substring(0, d.radius / 3);
-        });
+        .attr('font-size', '10px')
+        .attr('fill', 'white')
+        .text(d => d.text);
 
       function create_nodes(data, node_counter) {
         const i = cs.indexOf(data[node_counter].group);
@@ -107,7 +106,7 @@ export class SkillBubbleChartComponent implements OnInit {
           Math.sqrt(((i + 1) / m) * -Math.log(Math.random())) * maxRadius;
         const d = {
           cluster: i,
-          radius: data[node_counter].size * 2.5,
+          radius: data[node_counter].size * 2,
           text: data[node_counter].text,
           x: Math.cos((i / m) * 2 * Math.PI) * 200 + self.width / 2 + Math.random(),
           y: Math.sin((i / m) * 2 * Math.PI) * 200 + self.height / 2 + Math.random()

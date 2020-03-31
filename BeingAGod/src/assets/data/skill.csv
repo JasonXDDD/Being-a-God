@@ -1,23 +1,23 @@
-Angular 8+,15,1
+Angular 8+,30,1
 Vue/Nuxt,15,1
-React,15,1
-PWA,15,1
-SEO,15,1
-AJAX,15,1
-RWD,15,1
-Bootstrap 4,15,1
+React,10,1
+PWA,20,1
+SEO,20,1
+AJAX,30,1
+RWD,30,1
+Bootstrap 4,30,1
 Formantic UI,15,1
-Serverless,15,1
-UI/UX,15,2
-Wireframe,15,2
+Serverless,10,1
+UI/UX,10,2
+Wireframe,10,2
 Design Flow,15,2
-Focus Group,15,2
-UX Test,15,2
-WebApp,15,3
+Focus Group,10,2
+UX Test,10,2
+WebApp,20,3
 React Native,15,3
-iOS,15,3
-Android,15,3
-Team Manager,15,4
-GitHub,15,4
-Scrum,15,4
+iOS,10,3
+Android,10,3
+Team Manager,20,4
+GitHub,30,4
+Scrum,20,4
 Project Timeline,15,4

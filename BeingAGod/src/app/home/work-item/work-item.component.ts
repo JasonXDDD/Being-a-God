@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-work-item',
   templateUrl: './work-item.component.html',
   styleUrls: ['./work-item.component.sass']
 })
-export class WorkItemComponent implements OnInit {
+export class WorkItemComponent implements OnInit, AfterViewInit {
   @Input() title: string;
   @Input() description: string;
   @Input() time: Date;
@@ -18,8 +18,31 @@ export class WorkItemComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
+  ngAfterViewInit(): void {
+    this.initPopup();
+  }
+
+  initPopup() {
+    $('.tech').popup();
+  }
+
+  changeTitle(name) {
+    switch (name) {
+      case 'angular': return 'Angular 8+';
+      case 'vue': return 'Vue';
+      case 'nuxt': return 'Nuxt';
+      case 'react': return 'React';
+      case 'rn': return 'React Native';
+      case 'pwa': return 'Progressive Web Application';
+      case 'ios': return 'iOS';
+      case 'map': return 'GIS Map';
+      case 'websocket': return 'Web Socket';
+      case 'firebase': return 'Firebase';
+    }
+  }
   toggleList(value) {
 
     if (value) {

@@ -1,4 +1,4 @@
-<section class="position-relative" style="background-color: #abc;">
+<section class="position-relative">
   <div id="cover" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#cover" data-slide-to="0" class="active"></li>
@@ -35,11 +35,11 @@
   </div>
 </section>
 
-<section class="py-3" style="background-color: #bac;">
+<section class="py-5">
   <div class="d-flex justify-content-center align-items-center">
     <div
       class="bg rounded-circle mx-3"
-      style="width: 250px; height: 250px"
+      style="width: 10rem; height: 10rem"
       [style.backgroundImage]="'url(/assets/image/head.jpg)'"
     ></div>
 
@@ -48,29 +48,32 @@
       <p class="text-white-50">JasonXDDD，罐罐 XD</p>
 
       <p>
-        致力於前端工程...
+        2015 年大學初期就致力於前端工程，接觸並實作過不同類型的網站。<br>
+        我的個性屬於比較有想法的類型，會勇於去嘗試新東西並且堅持完成它。<br>
+        接觸過各類大小型案子、並且參與過新創公司開發，對於團隊管理有一定的經驗。<br>
+        如果有興趣，歡迎與我聯繫。
       </p>
     </div>
   </div>
 </section>
 
-<section class="py-3" style="background-color: #888;">
-  <div class="container">
+<section class="py-5">
+  <div class="container-lg">
     <div class="row no-gutters">
       <div class="col text-center">
-        <div class="ui small statistic">
-          <div class="value">5年4個月</div>
+        <div class="ui small statistic inverted">
+          <div class="value">5年3個月</div>
           <div class="label">前端學習經歷</div>
         </div>
       </div>
       <div class="col text-center">
-        <div class="ui small statistic">
+        <div class="ui small statistic inverted">
           <div class="value">20+</div>
           <div class="label">接手專案</div>
         </div>
       </div>
       <div class="col text-center">
-        <div class="ui small statistic">
+        <div class="ui small statistic inverted">
           <div class="value">100w+</div>
           <div class="label">經手最高價格</div>
         </div>
@@ -79,34 +82,38 @@
   </div>
 </section>
 
-<section class="py-3" style="background-color: #a98; height: 800px">
-  <div class="container">
+<section class="py-3">
+  <div class="container-lg">
     <div class="row no-gutters">
       <div class="col">
-        <div class="m-2 p-2 text-center" style="background-color: #789">
-          <h2 class="font-weight-bold my-2 text-center">技能樹</h2>
-          <app-skill-bubble-chart
-            [data]="skillList"
-          ></app-skill-bubble-chart>
+        <div class="m-2 p-2 h-100" style="background-color: #789">
+          <h2 class="title">技能樹</h2>
+          <div class="pt-3 text-center">
+            <app-skill-bubble-chart
+              [data]="skillList"
+            ></app-skill-bubble-chart>
+          </div>
         </div>
       </div>
       <div class="col">
-        <div class="m-2 p-2" style="background-color: #789">
-          <h2 class="font-weight-bold my-2 text-center">時間軸</h2>
-          <app-event-time-line
-            [eventList]="eventList">
-          </app-event-time-line>
+        <div class="m-2 p-2 h-100" style="background-color: #789">
+          <h2 class="title">時間軸</h2>
+          <div class="pt-3 text-center">
+            <app-event-time-line
+              [eventList]="eventList">
+            </app-event-time-line>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-3" style="background-color: #a98;">
-  <h2 class="font-weight-bold text-center">作品回顧</h2>
+<section class="py-3">
+  <h2 class="title">作品回顧</h2>
 
-  <div class="container">
-    <div class="d-flex flex-wrap justify-content-center">
+  <div class="px-5">
+    <div class="d-flex flex-wrap">
       <app-work-item
         *ngFor="let item of workList"
         [title]="item.title"
@@ -120,9 +127,19 @@
   </div>
 </section>
 
-<section class="py-3" style="background-color: #a98;">
-  <h2 class="font-weight-bold text-center">社團經歷</h2>
-  <div class="d-flex justify-content-center align-items-center">
+<section class="py-3">
+  <div class="px-5">
+    <p>1. 很有想法，會主動提出想法與改進</p>
+    <p>2. 願意嘗試，如果條件允許，會嘗試新技術或是新事物</p>
+    <p>3. 熱切溝通，雖我不善言辭，但我會多與人溝通與表達想法</p>
+    <p>4. 堅持負責，不喜歡看見自己的東西爛掉，接下來的案子會盡全力完成</p>
+    <p>缺點是常會一頭做下去碰，卻忘記付出成本太多，但成品絕對是能動與我滿意的作品。</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <h2 class="title">社團經歷</h2>
+  <div class="py-3 d-flex justify-content-center align-items-center">
     <div class="text-center">
       <div
         class="bg rounded-circle mx-3"
@@ -163,6 +180,6 @@
   </div>
 </section>
 
-<section class="" style="background-color: #a98; height: 800px">
-  <h2 class="font-weight-bold my-2 text-center">相關連結</h2>
+<section class="">
+  <h2 class="title">相關連結</h2>
 </section>
