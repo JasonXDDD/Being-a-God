@@ -4,9 +4,9 @@
 >
   <div
     class="bg position-relative h-cover"
-    [ngClass]="{ 'rounded-my-top': !isOpen }"
+    [ngClass]="{ 'rounded-my-top': !isOpen, 'cursor-pointer': link !== '' }"
     [style.backgroundImage]="'url(' + cover + ')'"
-    (click)="isOpen = !isOpen; toggleList(isOpen);"
+    (click)="goRoute(link)"
   >
     <div
       [ngClass]="{ 'rounded-my-top': !isOpen }"
@@ -27,22 +27,15 @@
   </div>
 
   <div
-    [ngClass]="{ 'rounded-my-bottom': !isOpen }"
+    [ngClass]="{ 'rounded-my-bottom': !isOpen, 'cursor-pointer': link !== '' }"
     class="p-3"
     style="background-color: #454f51;"
+    (click)="goRoute(link)"
   >
-    <h3 class="text-white font-weight-bold m-0 p-0">{{ title }}</h3>
+    <h3 class="text-white font-weight-bold m-0 p-0">
+      {{ title }}<i class="pl-2 external alternate icon text-white-50" style="font-size: 1rem;" *ngIf="link !== ''"></i>
+    </h3>
     <small class="m-0 text-white-50">{{ time | date: 'yyyy-MM-dd' }}</small>
     <p class="text-white-50">{{ description }}</p>
-    <hr class="border-light" *ngIf="isOpen" />
-
-    <button
-      class="fluid ui button inverted red"
-      *ngIf="isOpen"
-      (click)="isOpen = !isOpen; toggleList(isOpen);"
-    >
-      關閉
-    </button>
-    <div *ngIf="isOpen" style="height: 6rem;"></div>
   </div>
 </div>

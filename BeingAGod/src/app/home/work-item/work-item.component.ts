@@ -10,6 +10,7 @@ export class WorkItemComponent implements OnInit, AfterViewInit {
   @Input() description: string;
   @Input() time: Date;
   @Input() cover: string;
+  @Input() link: string;
   @Input() tech: string[];
   @Output() contentEvent = new EventEmitter<boolean>();
 
@@ -60,5 +61,11 @@ export class WorkItemComponent implements OnInit, AfterViewInit {
       });
     }
     this.contentEvent.emit(value);
+  }
+
+  goRoute(link) {
+    if (link) {
+      window.location.href = link;
+    }
   }
 }

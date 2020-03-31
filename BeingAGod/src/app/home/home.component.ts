@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
       description: '透過每日打卡控制飲食與朋友分享',
       cover: '/assets/image/work/diet-calendar.png',
       time: '2020-03',
+      link: 'https://diet-jasonxddd.web.app',
       tech: ['pwa', 'angular', 'firebase'],
     },
     {
@@ -27,6 +29,7 @@ export class HomeComponent implements OnInit {
       description: '參加 APPLE 移動應用創新賽 得獎作品',
       cover: '/assets/image/work/once-upon-a-time.png',
       time: '2020-03',
+      link: 'http://jasonxddd.nctu.me',
       tech: ['rn', 'ios'],
     },
     {
@@ -34,6 +37,7 @@ export class HomeComponent implements OnInit {
       description: '前公司官網',
       cover: '/assets/image/work/myproguide.png',
       time: '2020-03',
+      link: 'https://www.myproguide.com',
       tech: ['pwa', 'angular'],
     },
     {
@@ -41,6 +45,7 @@ export class HomeComponent implements OnInit {
       description: '前公司旅遊購物平台',
       cover: '/assets/image/work/myproguide-tour.png',
       time: '2020-03',
+      link: 'https://tour.myproguide.com',
       tech: ['pwa', 'nuxt'],
     },
     {
@@ -48,6 +53,7 @@ export class HomeComponent implements OnInit {
       description: '台電故障線路定位系統',
       cover: '/assets/image/work/taipower.png',
       time: '2020-03',
+      link: '',
       tech: ['pwa', 'angular', 'firebase', 'map'],
     },
     {
@@ -55,6 +61,7 @@ export class HomeComponent implements OnInit {
       description: '搭配工廠機器回傳數據顯示平台',
       cover: '/assets/image/work/auto-factory.png',
       time: '2020-03',
+      link: '',
       tech: ['react', 'websocket'],
     }
   ];
@@ -81,7 +88,17 @@ export class HomeComponent implements OnInit {
   ];
 
   isMobile = false;
-  constructor(private deviceService: DeviceDetectorService) { }
+  constructor(private deviceService: DeviceDetectorService, private router: Router) {
+    router.events.subscribe(s => {
+      if (s instanceof NavigationEnd) {
+        const tree = router.parseUrl(router.url);
+        if (tree.fragment) {
+          const element: any = document.querySelector('#' + tree.fragment);
+          if (element) { element.scrollIntoView(element); }
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
     // this.initGitHubCalendar();

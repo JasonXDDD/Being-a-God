@@ -25,10 +25,10 @@
   </div>
 </section>
 
-<section class="py-5">
+<section id="jasonxddd" class="py-5">
   <div class="d-flex flex-sm-row flex-column justify-content-center align-items-center">
     <div
-      class="bg rounded-circle mx-3"
+      class="bg rounded-circle mx-3 shadow-my-dark"
       style="width: 15rem; height: 15rem"
       [style.backgroundImage]="'url(/assets/image/head.jpg)'"
     ></div>
@@ -78,7 +78,7 @@
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
-<section class="py-3">
+<section id="skill-time" class="py-3">
   <div [ngClass]="{'container-lg': !isMobile}">
     <div class="row no-gutters">
       <div class="col">
@@ -175,7 +175,7 @@
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
-<section class="py-3">
+<section id="work" class="py-3">
   <h2 class="title">作品回顧</h2>
 
   <div class="px-3 px-sm-5">
@@ -186,6 +186,7 @@
         [description]="item.description"
         [cover]="item.cover"
         [time]="item.time"
+        [link]="item.link"
         [tech]="item.tech"
         (contentEvent)="setContent($event)"
       ></app-work-item>
@@ -234,7 +235,7 @@
   style="width: 10rem; border-color: white; border-width: .2rem"
 />
 
-<section class="py-5">
+<section id="group" class="py-5">
   <h2 class="title">社團經歷</h2>
   <div class="py-3 d-flex flex-column flex-sm-row justify-content-center align-items-center">
     <div class="text-center">
