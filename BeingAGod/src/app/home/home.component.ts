@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
     {
       title: 'Diet Calendar',
       description: '透過每日打卡控制飲食與朋友分享',
+      content: `Side Project，當時開始低醣飲食計畫，想要一個能夠記錄飲食的 APP，又不想花錢去購買其 APP，而隨手做的一個 PWA APP。\n
+      主要使用 Firebase 做為資料庫，並透過 Angular 實作 PWA 並使用手機的功能：相機、推波... 等。`,
       cover: '/assets/image/work/diet-calendar.png',
       time: '2020-03',
       link: 'https://diet-jasonxddd.web.app',
@@ -27,6 +29,9 @@ export class HomeComponent implements OnInit {
     {
       title: '從前從前',
       description: '參加 APPLE 移動應用創新賽 得獎作品',
+      content: `2019 得獎作品，碩班期間參加 APPLE 舉辦 "移動應用創新賽" 的得獎作品。\n
+      我們主要為小朋友打造一個自由創作故事的創作器，可以與爸爸媽媽一起創作屬於自己的故事。\n
+      裡頭藏有許多小驚喜與技術，像是使用 AR, Siri, 手繪畫圖, 錄影音...等，使 APP 充滿活力與樂趣。`,
       cover: '/assets/image/work/once-upon-a-time.png',
       time: '2020-03',
       link: 'http://jasonxddd.nctu.me',
@@ -74,6 +79,8 @@ export class HomeComponent implements OnInit {
   ];
 
   eventList = [
+    { type: 'time', time: '2020.07', event: '研究所畢業，並取得 “北教大 玩遊所” 碩士學位'},
+    { type: 'work', time: '2020.04', event: 'Leadtek 入職'},
     { type: 'time', time: '2020.03', event: `攻讀研究所，至今前端有${Number(moment().format('YYYY')) - 2015}年經驗`},
     { type: 'award', time: '2019.10', event: '參加 APPLE 移動應用創新賽中國賽 第二名'},
     { type: 'award', time: '2019.08', event: '參加 APPLE 移動應用創新賽台灣賽 第一名'},

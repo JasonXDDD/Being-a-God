@@ -8,8 +8,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 })
 export class SkillBubbleChartComponent implements OnInit {
   @Input() data: any[];
-  width = 500;
-  height = 500;
+  width = 550;
+  height = 650;
   isMobile = false;
 
   constructor(private deviceService: DeviceDetectorService) {}
@@ -18,7 +18,7 @@ export class SkillBubbleChartComponent implements OnInit {
     this.isMobile = this.deviceService.isMobile();
     if (this.isMobile) {
       this.width = 350;
-      this.height = 500;
+      this.height = 600;
     }
 
     this.genChart();
