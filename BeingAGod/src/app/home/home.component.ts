@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
       裡頭藏有許多小驚喜與技術，像是使用 AR, Siri, 手繪畫圖, 錄影音...等，使 APP 充滿活力與樂趣。`,
       cover: '/assets/image/work/once-upon-a-time.png',
       time: '2020-03',
-      link: 'http://jasonxddd.nctu.me:8083',
+      link: 'http://jasonxddd.me:8083',
       tech: ['rn', 'ios'],
     },
     {
